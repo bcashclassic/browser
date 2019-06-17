@@ -1,0 +1,132 @@
+@import "./media-mixin.styl"
+@import "./workarounds.styl"
+@import "./buttons.styl"
+
+.container
+  width 100%
+  max-width 1000px
+  margin 0 auto
+
+.mono-space {
+  font-family: "Courier New", Courier, monospace
+  letter-spacing 1px
+  line-height 18px
+  margin-bottom: 10px
+}
+
+legend {
+  border-bottom 1px solid #595959
+  padding-top 5px
+  padding-bottom 5px
+  font-size 25px
+  margin-top 15px
+  color #595959
+  width 100%
+}
+
+form
+  .input
+    border 1px solid #56636f
+    padding 10px
+    border-radius 5px
+    width 100%
+
+    -webkit-transition all .2s ease-in-out
+    -o-transition all .2s ease-in-out
+    transition all .2s ease-in-out
+    &:focus
+      box-shadow 0 3px 6px -1px rgba(0, 0, 0, 0.12), 0 10px 36px -4px rgba(77, 96, 232, 0.3)
+
+.page-loading
+  text-align center
+  padding 25px
+
+table
+  &.striped {
+      border-collapse: collapse;
+      width: 100%;
+      th, td {
+          text-align: left;
+          padding: 8px;
+      }
+      tr:nth-child(even){background-color: #f9f9f9}
+  }
+
+  &.wrap {
+      table-layout fixed
+      word-wrap break-word
+  }
+
+.info
+  width auto
+  padding 5px
+  overflow:hidden
+  .name
+    font-weight bold
+  .value
+    word-break break-all
+    font-size 15px
+
+.error
+  &.absence
+    padding 15px
+    color rgba(212, 37, 37, 0.62)
+    font-weight bold
+    text-align center
+
+a
+  text-decoration none
+  color #333
+  &:hover
+    text-decoration underline
+
++mobile()
+  .stretch
+    &.mobile
+      width 100%!important
+
+  .hidden
+    &.mobile
+      display none
+
+* {
+  box-sizing: border-box;
+}
+
+.clearfix {
+  clear both
+}
+
+.cut-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom 2px
+}
+
+.iota-val{
+  font-weight 600
+  padding: 4px
+  border-radius: 2px
+  color: #fff
+}
+
+.iota-val-positive{
+  background-color: #5CC099  
+}
+
+.iota-val-negative{
+  background-color: #E2224B    
+}
+
+.qr img {
+  width 100%
+}
+
+.toast-box
+{
+  color:#fff
+  font-family: 'arial'
+  border-radius: 0px
+  margin 10px
+}
