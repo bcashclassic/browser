@@ -16,12 +16,12 @@ export default {
   methods: {
     pickUnit(value) {
       var values = {
-        '1': 'i',
-        '1000': 'Ki',
-        '1000000': 'Mi',
-        '1000000000': 'Gi',
-        '1000000000000': 'Ti',
-        '1000000000000000': 'Pi'
+        '1': 'n',
+        '1000': 'mu',
+        '1000000': 'm',
+        '1000000000': 'BCC',
+        '1000000000000': 'k',
+        '1000000000000000': 'M'
       }
       value = Math.abs(value)
       var closestAmount = Math.floor((value + "").length / 3) * 3
@@ -29,24 +29,24 @@ export default {
       if(typeof values[key] !== undefined) {
         return values[key]
       }
-      return 'Pi'
+      return 'M'
     },
     listUnit(value)
     {
       var unit = this.pickUnit(value)
       var values = {
-        'i' : 'Iota',
-        'Ki' : "Kilo Iota",
-        "Mi" : "Mega Iota",
-        "Gi" : "Giga Iota",
-        "Ti" : "Tera Iota",
-        "Pi" : "Peta Iota"
+        'n' : 'nano BCC',
+        'mu' : "micro BCC",
+        "m" : "milli BCC",
+        "BCC" : "BCC",
+        "k" : "kilo BCC",
+        "M" : "Mega BCC"
       }
-      return `${iotaNode.iota.utils.convertUnits(value, 'i', unit)}` + " " + values[unit];
+      return `${iotaNode.iota.utils.convertUnits(value, 'n', unit)}` + " " + values[unit];
     },
     convertToUnits(value) {
       var unit = this.pickUnit(value)
-      return `${iotaNode.iota.utils.convertUnits(value, 'i', unit)} ${unit}`
+      return `${iotaNode.iota.utils.convertUnits(value, 'n', unit)} ${unit}`
     }
   }
 }

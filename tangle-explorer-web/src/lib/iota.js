@@ -5195,12 +5195,12 @@ var BigNumber       =   require("bignumber.js");
 *   Table of IOTA Units based off of the standard System of Units
 **/
 var unitMap = {
-    'i'   :   {val: new BigNumber(10).pow(0),  dp:  0},
-    'Ki'  :   {val: new BigNumber(10).pow(3),  dp:  3},
-    'Mi'  :   {val: new BigNumber(10).pow(6),  dp:  6},
-    'Gi'  :   {val: new BigNumber(10).pow(9),  dp:  9},
-    'Ti'  :   {val: new BigNumber(10).pow(12), dp: 12},
-    'Pi'  :   {val: new BigNumber(10).pow(15), dp: 15}// For the very, very rich
+    'n'   :   {val: new BigNumber(10).pow(0),  dp:  0},
+    'mu'  :   {val: new BigNumber(10).pow(3),  dp:  3},
+    'm'  :   {val: new BigNumber(10).pow(6),  dp:  6},
+    'BCC'  :   {val: new BigNumber(10).pow(9),  dp:  9},
+    'k'  :   {val: new BigNumber(10).pow(12), dp: 12},
+    'M'  :   {val: new BigNumber(10).pow(15), dp: 15}// For the very, very rich
 }
 
 /**
